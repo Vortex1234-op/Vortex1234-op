@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоды</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./api.js" defer></script>
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Прогноз погоды</h1>
+        <div class="tabs">
+            <button id="todayTab">Сегодня</button>
+            <button id="fiveDayTab">Прогноз на 5 дней</button>
+        </div>
+
+        <div>
+            <input type="text" id="cityInput" placeholder="Введите страну" />
+            <button id="searchButton">Поиск</button>
+        </div>
+
+        <div id="today" class="tab-content active">
+            <div id="currentWeather"></div>
+            <div id="detailedInfo"></div>
+            <div id="popularCities"></div>
+        </div>
+
+        <div id="fiveDay" class="tab-content">
+            <div id="forecastDays"></div>
+            <div id="detailedForecast"></div>
+        </div>
+    </div>
+</body>
+</html>
